@@ -1,128 +1,118 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+import CompanyOverviewBg from "../images/company-overview-bg.svg"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import Header from "../components/header"
+import HeroBg from "../images/hero-bg.svg"
+import Event1 from "../images/event1.svg"
+import Event2 from "../images/event2.svg"
+import ServicesSection from "../components/services-section"
+import Stories from "../components/stories"
+import CompanyLogoSection from "../components/company-logo-section"
+import TestimonialSlider from "../components/testimonial-slider"
+import SocialGateway from "../components/social-gateway"
+import ContactForm from "../components/contact-form"
+import Footer from "../components/footer"
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    <>
+      <div
+        className="relative bg-cover bg-center min-h-screen"
+        style={{ backgroundImage: `url(${HeroBg})` }}
+      >
+        <div className="relative z-10 max-w-screen-xl mx-auto px-6">
+          <Header />
+
+          <div className="text-white mt-20">
+            <h1 className="text-[80px] font-semibold leading-tight">
+              We build premium <span className="text-[#E2A750]">events</span>,
+              <span className="text-[#E2A750]"> exhibitions </span>, and{" "}
+              <span className="text-[#E2A750]">branded</span> environments.
+            </h1>
+
+            <p className="mt-4 max-w-2xl text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            {/* CTA Button */}
+            <button className="mt-6 px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style={{ backgroundImage: `url(${CompanyOverviewBg})` }}
+        className="relative bg-cover bg-center min-h-screen  py-28 overflow-hidden"
+      >
+        <div className="relative z-10 max-w-screen-xl mx-auto px-6">
+          <div className="grid grid-cols-1  md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+                You imagine it, we bring it to life.
+              </h2>
+              <p className="mt-4 text-white">
+                <span className=" font-medium">8 Point Entertainment</span>'s
+                events are conceptualized to become one of Singapore’s most
+                premier brand events, offering a breakthrough platform not just
+                for designers but also for the brands associated with them.
+              </p>
+              <p className="mt-2 text-gray-300">
+                We create targeted strategies so your video content speaks to
+                the right audience in the right way, through the right channel.
+              </p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-6 mt-8 text-lg font-semibold text-[14px] text-white">
+                <div>
+                  <span className="block text-[46px] mb-2 ">15+</span>
+                  Years of experience
+                </div>
+                <div>
+                  <span className="block text-[46px] mb-2">200+</span>
+                  Projects delivered per year
+                </div>
+                <div>
+                  <span className="block text-[46px]  mb-2">220</span>
+                  Happy employees
+                </div>
+                <div>
+                  <span className="block text-[46px] mb-2">32,000 sqm</span>
+                  Production & Logistic facilities
+                </div>
+              </div>
+            </div>
+
+            <div className="relative left-[61px]">
+              <img
+                src={Event1}
+                alt="Event lighting"
+                className="rounded-lg shadow-lg w-[50%] object-cover"
+              />
+
+              <img
+                src={Event2}
+                alt="Event show"
+                className="absolute bottom-[-30px] right-[215px] w-[35%] rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <ServicesSection />
+      <Stories />
+      <CompanyLogoSection />
+      <TestimonialSlider />
+      <SocialGateway />
+      <ContactForm />
+      <Footer />
+    </>
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
