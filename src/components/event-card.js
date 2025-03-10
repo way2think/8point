@@ -10,7 +10,7 @@ const EventCard = ({ title, description, image, reverse }) => {
       <img
         src={image}
         alt={title}
-        className="w-full md:w-1/2 h-full object-cover "
+        className="w-full md:w-1/2 h-full object-cover m-0"
       />
       <div className="p-6 md:w-1/2">
         <h3 className="text-2xl font-bold">{title}</h3>
