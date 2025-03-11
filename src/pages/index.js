@@ -1,5 +1,4 @@
 import * as React from "react"
-import CompanyOverviewBg from "../images/company-overview-bg.svg"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Header from "../components/header"
@@ -13,6 +12,9 @@ import TestimonialSlider from "../components/testimonial-slider"
 import SocialGateway from "../components/social-gateway"
 import ContactForm from "../components/contact-form"
 import Footer from "../components/footer"
+
+import CompanyOverviewBg from "../images/company-overview-bg.svg"
+import GetInTouch from "../components/get-in-touch"
 
 const IndexPage = () => (
   <Layout>
@@ -51,7 +53,7 @@ const IndexPage = () => (
         <div className="relative z-10 max-w-screen-xl mx-auto px-6">
           <div className="grid grid-cols-1  md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+              <h2 className="text-[80px] font-semibold leading-tight text-white">
                 You imagine it, we bring it to life.
               </h2>
               <p className="mt-4 text-white">
@@ -90,13 +92,13 @@ const IndexPage = () => (
               <img
                 src={Event1}
                 alt="Event lighting"
-                className="rounded-lg shadow-lg w-[50%] object-cover"
+                className="rounded-lg shadow-lg w-[80%] object-cover"
               />
 
               <img
                 src={Event2}
                 alt="Event show"
-                className="absolute bottom-[-30px] right-[215px] w-[35%] rounded-lg shadow-lg"
+                className="absolute bottom-[-80px] right-[75px] w-[60%] rounded-lg shadow-lg"
               />
             </div>
           </div>
@@ -107,7 +109,7 @@ const IndexPage = () => (
       <CompanyLogoSection />
       <TestimonialSlider />
       <SocialGateway />
-      <ContactForm />
+      <GetInTouch />
       <Footer />
     </>
   </Layout>

@@ -31,6 +31,7 @@ const Layout = ({ children }) => {
           // maxWidth: `var(--size-content)`,
           // padding: `var(--size-gutter)`,
         }}
+        className="font-poppins"
       >
         <main>{children}</main>
         {/* <footer
