@@ -5,7 +5,17 @@ module.exports = {
     "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        "custom-xl": [
+          "80px",
+          { lineHeight: "110%", letterSpacing: "-0.02em", fontWeight: "600" },
+        ],
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
     screens: {
       xs: "320px", // Extra small devices (small phones)
       sm: "640px",
